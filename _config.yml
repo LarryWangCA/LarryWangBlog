@@ -1,3 +1,6 @@
 title: 我的博客
 description: 用 GitHub Pages 搭建的个人博客
-theme: jekyll-theme-cayman   # 主题，可以换成别的
+theme: minima   # 用 minima 主题，支持文章/首页
+url: "https://larrywangca.github.io"   # 你的 GitHub Pages 域名
+baseurl: "/LarryWangBlog"              # 仓库名 (注意大小写)
+
