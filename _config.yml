@@ -1,6 +1,12 @@
 title: 我的博客
 description: 用 GitHub Pages 搭建的个人博客
-theme: minima   # 用 minima 主题，支持文章/首页
-url: "https://larrywangca.github.io"   # 你的 GitHub Pages 域名
-baseurl: "/LarryWangBlog"              # 仓库名 (注意大小写)
+theme: minima
+url: "https://larrywangca.github.io"
+baseurl: "/LarryWangBlog"
+
+# 让换行更接近你在编辑器里看到的效果（可选，但推荐）
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: true
 
