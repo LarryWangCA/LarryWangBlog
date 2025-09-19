@@ -4,9 +4,16 @@ theme: minima
 url: "https://larrywangca.github.io"
 baseurl: "/LarryWangBlog"
 
-# 让换行更接近你在编辑器里看到的效果（可选，但推荐）
+# 让 Pages 按多伦多时区构建，避免“未来文章”被隐藏
+timezone: America/Toronto
+# 如有将来日期的文章也要显示，打开这一行
+future: true
+
+# Markdown 渲染设定（更接近编辑器里的换行）
 markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: true
+
+
 
