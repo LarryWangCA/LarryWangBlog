@@ -1,6 +1,6 @@
 TODOs: LC542, LC994, LC1926. 
 
-Bit operation related questions:
+Bit operation related questions (in LC top interview 150):
 AND e.g. 0101 & 0011 = 0001
 OR  e.g. 0101 & 0011 = 0111
 XOR e.g. 0101 ^ 0011 = 0110 (一真一假为1)
