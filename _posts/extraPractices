@@ -1,1 +1,9 @@
 TODOs: LC542, LC994, LC1926. 
+
+Bit operation related questions:
+
+
+Sorting technique;
+sort
+selection sort: time O(N^2), space O(1)
+merge sort: time O(NlongN), space O(N)
