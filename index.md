@@ -8,8 +8,6 @@ permalink: /
 
 这里是用 **GitHub Pages + Jekyll** 搭建的博客。
 
-[→ 查看「周赛」专页]({{ "/leetcode/" | relative_url }})
-
 ---
 
 <ul>
@@ -18,7 +16,14 @@ permalink: /
     <li>
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       <span> — {{ post.date | date: "%Y-%m-%d" }}</span>
-      {%- if post.excerpt -%}<br>{{ post.excerpt | strip_html | truncate: 120 }}{%- endif -%}
+
+      {%- capture first_h2 -%}
+        {{ post.content | markdownify | split: '<h2>' | slice: 1, 1 | join: '' | split: '</h2>' | first | strip }}
+      {%- endcapture -%}
+      {%- if first_h2 != '' -%}
+        <br><strong>{{ first_h2 }}</strong>
+      {%- endif -%}
+
     </li>
   {%- endfor -%}
 </ul>
