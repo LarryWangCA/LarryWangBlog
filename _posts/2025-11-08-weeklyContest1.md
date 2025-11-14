@@ -2,7 +2,7 @@
 layout: post
 title: "Leetcode Biweekly contest 169"
 date: 2025-11-08 10:00:00 -0400
-categories: 随笔
+categories: 周赛
 ---
 
 ## C++ Tips:  
