@@ -1,6 +1,6 @@
 ---
 layout: page
-title: LeetCode 专区
+title: LeetCode周赛专区
 permalink: /leetcode/
 ---
 
