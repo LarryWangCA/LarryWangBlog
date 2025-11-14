@@ -17,11 +17,15 @@ permalink: /
       <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
       <span> — {{ post.date | date: "%Y-%m-%d" }}</span>
 
-      {%- capture first_h2 -%}
-        {{ post.content | markdownify | split: '<h2>' | slice: 1, 1 | join: '' | split: '</h2>' | first | strip }}
-      {%- endcapture -%}
-      {%- if first_h2 != '' -%}
-        <br><strong>{{ first_h2 }}</strong>
+      {%- comment -%} 提取第一个二级标题 ## ... {%- endcomment -%}
+      {%- assign html = post.content | markdownify -%}
+      {%- assign h2_parts = html | split: '<h2' -%}
+      {%- if h2_parts.size > 1 -%}
+        {%- assign after_tag = h2_parts[1] | split: '>' | slice: 1, 1 | join: '' -%}
+        {%- assign first_h2 = after_tag | split: '</h2>' | first | strip | strip_html -%}
+        {%- if first_h2 != '' -%}
+          <br><strong>{{ first_h2 }}</strong>
+        {%- endif -%}
       {%- endif -%}
 
     </li>
