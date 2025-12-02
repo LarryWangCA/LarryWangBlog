@@ -5,6 +5,9 @@ date: 2025-11-29 10:00:00 -0400
 categories: 周赛
 ---
 
+# C++ Tips
+c++中：iterator - iterator  ==  一个整数（距离）
+
 ## Leetcode 3759 Count Elements With at Least K Greater Values（反复练习）
 数组排序后，同upper_bound()函数求出第一个比当前元素大的元素的位置，之后右侧所有元素个数便可计算。  
 具体用法：  
@@ -16,6 +19,7 @@ last: 搜索范围的结束迭代器。
 value: 要查找的值。  
 iterator: 返回的迭代器类型，取决于容器。  
 作用: 返回一个迭代器，指向 [first, last) 范围内第一个大于 value 的元素。   
+
 
 ## Leetcode 3760 Maximum Substrings With Distinct Start（反复练习）
 因为需要每个子串的开头字母不同，我们遍历一次统计每个字母最后一次出现的位置。  
