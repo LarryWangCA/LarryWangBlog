@@ -75,8 +75,10 @@ e.g. 6 = 110； 翻转 → 011 → 十进制 = 3。
 这样是反着想，但完全等价。
 
 房间 j 得分的条件！（掉血后 hp ≥ requirement）：
-hp - (damage[s] + … + damage[j]) >= requirement[j] (重要公式)
+hp - (damage[s] + … + damage[j]) >= requirement[j] (重要公式)  
 上述公式中伤害的计算可以使用前缀和。
+（⭐当你发现题目中出现「重复计算连续东西」的时候，90% 就应该用前缀和！）
+
 ```
 公式递推：
 damage[s] + ... + damage[j] = pref[j+1] - pref[s];
@@ -96,8 +98,7 @@ pref[s] ≥ L_j （s 区间是 0..j）
                 ans += (long long)(j - t0 + 1);
             }
 ```
-lower_bound, upper_bound函数本质上是二分查找。
-
+lower_bound, upper_bound函数本质上是二分查找。  
 
 
 
