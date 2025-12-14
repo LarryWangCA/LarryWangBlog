@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Leetcode weekly contest 480"
-date: 2025-12-06 10:00:00 -0400
+date: 2025-12-14 10:00:00 -0400
 categories: 周赛
 ---
 
