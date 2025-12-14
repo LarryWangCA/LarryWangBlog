@@ -6,7 +6,7 @@ categories: 周赛
 ---
 
 ## Leetcode 3775 Reverse Words With Same Vowel Count
-正确的「拆分 string(单词之间有一个空格做区分） → vector<string>」写法（推荐）
+正确的「拆分 string(单词之间有一个空格做区分） → vector<string>」写法（推荐）  
 注意else一定要有，否则下一个单词会多一个空格。   
 ```
 vector<string> splitWords(string s) {
@@ -44,7 +44,7 @@ balance[leftIndex]  // int
 debtAmount          // long long
 long long takeFromLeft = min<long long>(balance[leftIndex], debtAmount);
 ```
-<> 不是类型转换，是“模板参数”!
+<> 不是类型转换，是“模板参数”!  
 std::min要求两个参数是同一类型，不能直接使用min(balance[leftIndex], debtAmount)    
 也可以用以下显式转换：
 ```
