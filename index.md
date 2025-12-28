@@ -1,10 +1,3 @@
----
-layout: page
-title: 代码训练营一刷笔记
-permalink: /
----
-
-# Welcome 👋
 
 ---
 layout: page
@@ -12,28 +5,55 @@ title: Home
 permalink: /
 ---
 
-# Welcome 👋
+# Browse by Tag → Problems
 
-- [Day1–Day60（First Pass）](/day1-60/)
-- [Weekly / Biweekly Contests](/leetcode/)
-
----
-
-## Browse by Category (Tags)
-
-{% assign groups = "array,hash-table,linked-list,string,stack-queue,tree,backtracking,greedy,dp,monotonic-stack,heap,bit,math,graph" | split: "," %}
+{% assign groups = "array,dp,tree,bit,heap,greedy,backtracking,string,hash-table,linked-list,stack-queue,monotonic-stack,math,graph,contest" | split: "," %}
 
 {% for tag in groups %}
   {% assign posts = site.tags[tag] %}
   {% if posts and posts.size > 0 %}
+
   <h2>{{ tag }}</h2>
   <ul>
     {% for post in posts %}
-      <li>
-        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
-        <span> — {{ post.date | date: "%Y-%m-%d" }}</span>
-      </li>
+      {%- assign html = post.content | markdownify -%}
+      {%- assign parts = html | split: '<h2' -%}
+
+      {%- if parts.size > 1 -%}
+        {%- for part in parts offset:1 -%}
+          {%- comment -%}
+            1) 抽取 h2 的 id
+          {%- endcomment -%}
+          {%- assign id_part = part | split: 'id="' -%}
+          {%- if id_part.size > 1 -%}
+            {%- assign h2_id = id_part[1] | split: '"' | first -%}
+          {%- else -%}
+            {%- assign h2_id = "" -%}
+          {%- endif -%}
+
+          {%- comment -%}
+            2) 抽取 h2 的文字
+          {%- endcomment -%}
+          {%- assign after_tag = part | split: '>' | slice: 1, 1 | join: '' -%}
+          {%- assign h2_raw = after_tag | split: '</h2' | first -%}
+          {%- assign h2_text = h2_raw | strip_html | strip -%}
+
+          {%- comment -%}
+            3) 只显示包含 Leetcode 的标题（即题目）
+          {%- endcomment -%}
+          {%- if h2_text contains "Leetcode" -%}
+            <li>
+              <a href="{{ post.url | relative_url }}{% if h2_id != '' %}#{{ h2_id }}{% endif %}">
+                {{ h2_text }}
+              </a>
+              <span style="opacity:0.7;">（来自：{{ post.title }}）</span>
+            </li>
+          {%- endif -%}
+        {%- endfor -%}
+      {%- endif -%}
+
     {% endfor %}
   </ul>
+
   {% endif %}
 {% endfor %}
