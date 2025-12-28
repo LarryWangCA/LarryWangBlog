@@ -6,7 +6,7 @@ permalink: /
 
 # Problems (by tag)
 
-{% assign posts = site.tags.array %}
+{% assign posts = site.tags.array | sort: "date" %}
 
 <h2>array</h2>
 <ul>
