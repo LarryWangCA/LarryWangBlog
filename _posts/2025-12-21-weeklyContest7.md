@@ -24,7 +24,7 @@ pop()：O(log N)
 
 
 
-## 3779. Minimum Number of Operations to Have Distinct Elements (反复练习)
+## Leetcode 3779. Minimum Number of Operations to Have Distinct Elements (反复练习)
 nums[i]的值小于等于100000，不代表i有这么大！
 本题是模拟题，统计频次常用方法如下：
 ```
@@ -57,7 +57,7 @@ nums[i]的值小于等于100000，不代表i有这么大！
         return ops;
 ```
 
-## 3780. Maximum Sum of Three Numbers Divisible by Three （了解思路即可）
+## Leetcode 3780. Maximum Sum of Three Numbers Divisible by Three （了解思路即可）
 很少会用回溯的暴力解法（太费时），本题属于贪心加纯数学理解。  
 3️⃣ 枚举「合法组合」取最大值  
 	•	三个 %3 == 0
