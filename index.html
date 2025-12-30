@@ -32,8 +32,9 @@ permalink: /
             {%- assign after_tag = gt[1] -%}
             {%- assign h2_raw = after_tag | split: '</h2' | first -%}
             {%- assign h2_text = h2_raw | strip_html | strip -%}
+            {%- assign h2_lower = h2_text | downcase -%}
 
-            {%- if h2_text contains "Leetcode" -%}
+            {%- if h2_lower contains "leetcode" or h2_text contains "卡码网" -%}
               <li>
                 <a href="{{ post.url | relative_url }}{% if h2_id != '' %}#{{ h2_id }}{% endif %}">
                   {{ h2_text }}
