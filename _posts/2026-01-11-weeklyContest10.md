@@ -17,7 +17,7 @@ for魂环暴力列举每个subarray时，外层为起点，内层为从起点到
             for (int j = i; j < length; ++j)
 ```
 
-## 3806. Maximum Bitwise AND After Increment Operations(目前只了解部分思路)
+## Leetcode 3806. Maximum Bitwise AND After Increment Operations(目前只了解部分思路)
 假设（只看 4 位方便）：
 	•	targetMask = 1011
 	•	value      = 1001
