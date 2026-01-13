@@ -8,6 +8,20 @@ categories: 周赛
 # C++ Tips
 在 C++ 里，a % b 的结果 和 a（被除数）同号  
 
+如果map不检查key是否存在直接用（如下），会自动插入key并初始化（int为0）
+```
+unordered_map<string, int> count;
+long long res = 0;
+res += count[words[i]];
+```
+如果不想自动插入，就先find查找，再进行操作。
+```
+auto it = count.find(key);
+if (it != count.end()) {
+    // 找到了
+}
+```
+
 
 ## Leetcode 3804. Number of Centered Subarrays
 for魂环暴力列举每个subarray时，外层为起点，内层为从起点到终点，比较方便。
