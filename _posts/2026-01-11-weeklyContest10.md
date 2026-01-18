@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Leetcode biweekly contest 173"
+title: "Leetcode weekly contest 484"
 date: 2026-01-11 10:00:00 -0400
 categories: 周赛
 ---
