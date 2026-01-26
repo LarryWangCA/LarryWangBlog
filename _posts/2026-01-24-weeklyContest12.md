@@ -5,7 +5,7 @@ date: 2026-01-25 10:00:00 -0400
 categories: 周赛
 ---
 
-## 3819. Rotate Non Negative Elements（了解思路）
+## Leetcode 3819. Rotate Non Negative Elements（了解思路）
 纯模拟题，学习将旧数组插入新数组的方法：  
 新建一个数组，将原数组分两次插入即可。
 ```
@@ -19,7 +19,7 @@ categories: 周赛
 ```
 
 
-## 3820. Pythagorean Distance Nodes in a Tree（反复练习，类似于bfs模版题）
+## Leetcode 3820. Pythagorean Distance Nodes in a Tree（反复练习，类似于bfs模版题）
 题意本身等价于x,y,z三个点到其余所有点的最短距离（因为是无向图），用bfs即可。  
 复习之前的bfs内容，注意边的关系用领接表比较合适。  
 ```
