@@ -6,7 +6,7 @@ permalink: /
 
 <h1>Problems Index (by Tag)</h1>
 
-{% assign groups = "array,dp,tree,bit,heap,greedy,backtracking,string,hash-table,linked-list,stack-queue,monotonic-stack,math,graph" | split: "," %}
+{% assign groups = "array,linked-list,hash-table,string,stack-queue,tree,backtracking,greedy,dp,monotonic-stack,graph,heap,bit,math" | split: "," %}
 
 {% for tag in groups %}
   {% assign posts = site.tags[tag] %}
